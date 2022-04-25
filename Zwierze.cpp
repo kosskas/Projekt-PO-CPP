@@ -11,13 +11,13 @@ Zwierze::Zwierze(int s, int i){
 	nextX = x;
 }
 void Zwierze::akcja() {
-	//cout << "Zwierze " << rysowanie() << " na pozycji "<<y<<" "<<x<<" wykonuje ruch \n";
 	nowaPozycja();
 	Organizm* kolizyjny = swiat->pobierzWspolrzedne(nextY, nextX);
 	wykonunajRuchNa(kolizyjny);
 	x = nextX;
 	y = nextY;
 }
+
 void Zwierze::wykonunajRuchNa(Organizm* kolizyjny) {
 	if (kolizyjny != NULL && kolizyjny != this) {
 		if (porownajGatunek(kolizyjny)) {
@@ -26,8 +26,6 @@ void Zwierze::wykonunajRuchNa(Organizm* kolizyjny) {
 			nextY = y;
 		}
 		else {
-			//this jest atakujacym
-			//kolizyjny sie broni
 			kolizyjny->kolizja(this);
 		}
 	}

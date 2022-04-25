@@ -34,15 +34,10 @@ void Organizm::nowaTura() {
 
 void Organizm::kolizja(Organizm* atakujacy) {
 	if (this->czyOdbilAtak(atakujacy)) {
-	
-		//cout << this->rysowanie() << " ODBIL ATAK: ";
-		//cout << "Organizm " << atakujacy->rysowanie() << " umarlo\n";
 		cout << this->rysowanie() << " zabil " << atakujacy->rysowanie() << endl;
 		atakujacy->smierc();
 	}
 	else {
-		//cout << this->rysowanie() << " NIE ODBIL ATAKU: ";
-		//cout << "Organizm " << this->rysowanie() << " umarlo\n";
 		cout << atakujacy->rysowanie() << " zabil " << this->rysowanie() << endl;
 		this->smierc();
 	}

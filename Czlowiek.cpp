@@ -15,7 +15,7 @@ Czlowiek::Czlowiek(int posY, int posX, int wiek)
 void Czlowiek::nowaPozycja() {
     cout << "Czlowiek sila:  " << sila << endl;
     cout << UMJ << " Uzycie zdolnosci specjalnej\n";
-    cout << "Czlowiek wykonuje ruch: ";
+    cout << "Czlowiek wykonuje akcje: ";
     int dx = 0, dy = 0;
     _getch();
     switch (_getch()) {
@@ -37,15 +37,18 @@ void Czlowiek::nowaPozycja() {
             break;
         case UMJ:
             if (czyMoze) {
-                cout << "Czlowiek wypil magiczny eliksir\n";
                 wypijMagicznyEliksir();
+                cout << "Czlowiek wypil magiczny eliksir\n";
+                nowaPozycja();
+                return;
             }
             else {
                 if (czyAktywnaUmj)
                     cout << "Zdolnosc jest aktywna\n";
                 else
                     cout << "Pozostalo " << czasOczewiw << " rund do uzycia\n";
-                _getch();
+                nowaPozycja();
+                return;
             }
             break;
         default:

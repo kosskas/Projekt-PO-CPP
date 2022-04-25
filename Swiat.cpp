@@ -14,6 +14,7 @@ Swiat::Swiat(int N, int M, list<Organizm*> L, int ziarno, int runda)
 	: Swiat(N, M, L) {
 	this->tura = runda;
 	this->seed = ziarno;
+	srand(seed);
 }
 
 void Swiat::rysujSwiat() {
@@ -137,8 +138,8 @@ Organizm* Swiat::pobierzWspolrzedne(int y, int x) {
 }
 
 void Swiat::dodajOrganizm(Organizm* nowy) {
-	organizm.push_back(nowy);
 	nowy->SetSwiat(this);
+	organizm.push_back(nowy);
 }
 
 void Swiat::zwolnijMiejsce() {
@@ -153,8 +154,6 @@ Swiat::~Swiat() {
 	}
 	delete[] plansza;
 	plansza = NULL;
-	wymX = 0;
-	wymY = 0;
 	for (Organizm* N : organizm) {
 		delete N;
 	}

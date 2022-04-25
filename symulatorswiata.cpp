@@ -23,6 +23,8 @@ int main() {
     list<Organizm*> L;
     Swiat* S = NULL;
 	char komenda[MAX_CMD_DL];
+	cout << "[ Mateusz Stencel, s188676 Informatyka]" << endl;
+	cout << "Ruch :\030\031\032\033" << endl;
     cout << "wczytaj => [stan]" << endl;
     cin >> komenda;
 
@@ -124,9 +126,9 @@ Swiat* wczytaj(){
 					N.push_back(new Czlowiek(y, x, wiek));
 				}
 				else if (sprawdzNapis(komenda, "#")) {
-				//Trawa
-				cin >> y >> x >> wiek;
-				N.push_back(new Trawa(y, x, wiek));
+					//Trawa
+					cin >> y >> x >> wiek;
+					N.push_back(new Trawa(y, x, wiek));
 				}
 				else if (sprawdzNapis(komenda, "*")) {
 					//mlecz

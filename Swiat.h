@@ -6,6 +6,7 @@
 #include <string.h>
 #include <cstdlib>
 #include "Organizm.h"
+
 using namespace std;
 class Organizm;
 
@@ -68,8 +69,8 @@ class Organizm;
 class Swiat {
 private:
 	char** plansza;
-	int wymX;
-	int wymY;
+	const int wymX;
+	const int wymY;
 	list<Organizm*> organizm;
 	int tura;
 	unsigned int seed;

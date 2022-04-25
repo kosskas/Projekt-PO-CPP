@@ -32,14 +32,14 @@ void Antylopa::kolizja(Organizm* atakujacy) {
 		if (kolizyjny != NULL && kolizyjny != this)
 			Zwierze::kolizja(atakujacy);
 		else {
-			cout << "\t\tAntylopa wykonuje ucieczke\n";
+			cout << "\tAntylopa wykonuje ucieczke\n";
 			x = nextX;
 			y = nextY;
 		}
 	}
 	else
 	{
-		cout << "\t\tAntylopa nie uciekla\n";
+		cout << "\tAntylopa nie uciekla\n";
 		Zwierze::kolizja(atakujacy);
 	}
 }
