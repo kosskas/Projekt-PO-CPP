@@ -10,8 +10,8 @@ Swiat::Swiat(int Y, int X, list<Organizm*> L)
 	tura = 0;
 	gra = true;
 }
-Swiat::Swiat(int N, int M, list<Organizm*> L, int ziarno, int runda)
-	: Swiat(N, M, L) {
+Swiat::Swiat(int Y, int X, list<Organizm*> L, int ziarno, int runda)
+	: Swiat(Y, X, L) {
 	this->tura = runda;
 	this->seed = ziarno;
 	srand(seed);
@@ -69,15 +69,19 @@ void Swiat::rysujMape() {
 	}
 }
 
-void Swiat::symuluj(int liczbaRund) {	
+void Swiat::symuluj(int liczbaRund) {
+	int znak;
 	for (int i = tura; i < liczbaRund && gra; i++) {	
-		cout << "Nacisnij dowolny przycisk aby kontynuowaæ lub 'z' zeby zapisac\n";
-		if (_getch() == 'z'){
+		cout << "Nacisnij dowolny przycisk aby kontynuowaæ lub '"<< KLAWISZ_ZAPISZ <<"' zeby zapisac\n";
+		znak = _getch();
+		if ((char)znak == KLAWISZ_ZAPISZ){
 			zapiszSwiat();
 			gra = false;
 			_getch();
 			break;
 		}
+		if (znak == SYMBOL_STRZALKOWY)
+			_getch();			
 		system("cls");
 		rysujSwiat();
 		cout << "\tTura " << i << endl;

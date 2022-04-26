@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _ZWIERZE_
+#define _ZWIERZE_
 #include "Organizm.h"
 class Zwierze : public Organizm {
 protected:
@@ -15,3 +16,4 @@ public:
 	virtual void wykonunajRuchNa(Organizm* kolizyjny);
 	virtual ~Zwierze();
 };
+#endif // !_ZWIERZE_

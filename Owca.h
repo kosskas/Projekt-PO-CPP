@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _OWCA_
+#define _OWCA_
 #include "Zwierze.h"
 class Owca : public Zwierze {
 public:
@@ -8,3 +9,4 @@ public:
 	bool porownajGatunek(Organizm* drugi) const override;
 	Organizm* stworzNowy(int nowyY, int nowyX) override;
 };
+#endif // !_OWCA_

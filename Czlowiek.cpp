@@ -14,7 +14,7 @@ Czlowiek::Czlowiek(int posY, int posX, int wiek)
 }
 void Czlowiek::nowaPozycja() {
     cout << "Czlowiek sila:  " << sila << endl;
-    cout << UMJ << " Uzycie zdolnosci specjalnej\n";
+    cout << UMJ_KLAWIATURA << " Uzycie zdolnosci specjalnej\n";
     cout << "Czlowiek wykonuje akcje: ";
     int dx = 0, dy = 0;
     _getch();
@@ -35,7 +35,7 @@ void Czlowiek::nowaPozycja() {
             cout << "LEWO\n";
             dx = -1;
             break;
-        case UMJ:
+        case UMJ_KLAWIATURA:
             if (czyMoze) {
                 wypijMagicznyEliksir();
                 cout << "Czlowiek wypil magiczny eliksir\n";

@@ -1,10 +1,6 @@
-#pragma once
+#ifndef _CZLOWIEK_
+#define _CZLOWIEK_
 #include "Zwierze.h"
-#define GORA 72
-#define DOL 80
-#define PRAWO 77
-#define LEWO 75
-#define UMJ 'u'
 
 class Czlowiek : public Zwierze {
 private:
@@ -22,4 +18,4 @@ public:
 	bool porownajGatunek(Organizm* drugi) const override;
 	Organizm* stworzNowy(int nowyY, int nowyX) override;
 };
-
+#endif // !_CZLOWIEK_

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _GUARANA_
+#define _GUARANA_
 #include "Roslina.h"
 class Guarana : public Roslina {
 public:
@@ -9,3 +10,4 @@ public:
 	bool porownajGatunek(Organizm* drugi) const override;
 	Organizm* stworzNowy(int nowyY, int nowyX) override;
 };
+#endif // !_GUARANA_

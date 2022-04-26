@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _LIS_
+#define _LIS_
 #include "Zwierze.h"
 class Lis : public Zwierze {
 public:
@@ -9,3 +10,4 @@ public:
 	bool porownajGatunek(Organizm* drugi) const override;
 	Organizm* stworzNowy(int nowyY, int nowyX) override;
 };
+#endif // !_LIS_

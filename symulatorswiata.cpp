@@ -94,7 +94,7 @@ Swiat* wczytaj(){
 		}
 		else if (sprawdzNapis(komenda, "[org]")) {
 			do {
-				cin >> komenda;
+				cin >> komenda>>y>>x>>wiek;				
 				if (sprawdzNapis(komenda, "W")) {
 					//wilk
 					cin >> y >> x >> wiek;
@@ -149,7 +149,7 @@ Swiat* wczytaj(){
 					//barszcz
 					cin >> y >> x >> wiek;
 					N.push_back(new BarszczSosnowskiego(y, x, wiek));
-				}
+				}				
 			} while (!sprawdzNapis(komenda, "[org]"));
 		}
 	} while (!sprawdzNapis(komenda, "[stan]"));

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _BARSZCZSOSNOWNKIEGO_
+#define _BARSZCZSOSNOWNKIEGO_
 #include "Roslina.h"
 class BarszczSosnowskiego : public Roslina {
 private:
@@ -13,3 +14,4 @@ public:
 	bool porownajGatunek(Organizm* drugi) const override;
 	Organizm* stworzNowy(int nowyY, int nowyX) override;
 };
+#endif // !_BARSZCZSOSNOWNKIEGO_

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _ORGANIZM_
+#define _ORGANIZM_
 #include "Swiat.h"
 class Swiat;
 class Organizm {
@@ -32,3 +33,4 @@ public:
 	virtual ~Organizm();
 };
 bool porownajOrganizmy(const Organizm* pierwszy, const Organizm* drugi);
+#endif // !_ORGANIZM_
