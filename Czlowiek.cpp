@@ -64,9 +64,9 @@ void Czlowiek::nowaPozycja() {
 }
 
 void Czlowiek::wypijMagicznyEliksir() {
-    sila = ELIKSIR_BONUS_SILA + 1;
+    sila = ELIKSIR_BONUS_SILA;
     czyAktywnaUmj = true;
-    czasTrwania = CZAS_TRWANIA_UMIEJETNOSCI + 1;
+    czasTrwania = CZAS_TRWANIA_UMIEJETNOSCI;
     czyMoze = false;
     czasOczewiw = CZAS_OCZEKIWANIA_NA_UMIEJETNOSC;
 }
