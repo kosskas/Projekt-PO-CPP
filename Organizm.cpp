@@ -8,7 +8,7 @@ bool Organizm::czyOdbilAtak(Organizm* atakujacy){
 }
 
 void Organizm::rozmnazanie(Organizm* drugi) {
-	if (wiek > WIEK_ROZMNAZANIA && drugi->wiek > WIEK_ROZMNAZANIA) {
+	if (wiek > WIEK_ROZMNAZANIA && drugi->GetWiek() > WIEK_ROZMNAZANIA) {
 		for (int dy = -1; dy <= 1; dy++) {
 			for (int dx = -1; dx <= 1; dx++) {
 				Organizm* dziecko = swiat->pobierzWspolrzedne(y + dy, x + dx);

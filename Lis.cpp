@@ -16,7 +16,7 @@ char Lis::rysowanie() const {
 
 void Lis::wykonunajRuchNa(Organizm* kolizyjny) {
 	if (kolizyjny != NULL && kolizyjny != this && kolizyjny->GetSila() > sila) {
-		cout << "\tLis nie wykonuje ruchu na " << kolizyjny->rysowanie() << endl;
+		//cout << "Lis nie wykonuje ruchu na " << kolizyjny->rysowanie() << endl;
 		nextX = x;
 		nextY = y;
 	}

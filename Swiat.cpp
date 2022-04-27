@@ -39,7 +39,7 @@ void Swiat::naniesOrganizmyNaMape() {
 void Swiat::wyczyscMape() {
 	for (int y = 0; y < wymY; y++) {
 		for (int x = 0; x < wymX; x++) {
-			plansza[y][x] = '.';
+			plansza[y][x] = ' ';
 		}
 	}
 }
@@ -72,7 +72,9 @@ void Swiat::rysujMape() {
 void Swiat::symuluj(int liczbaRund) {
 	int znak;
 	for (int i = tura; i < liczbaRund && gra; i++) {	
-		cout << "Nacisnij dowolny przycisk aby kontynuowaæ lub '"<< KLAWISZ_ZAPISZ <<"' zeby zapisac\n";
+		//rysujSwiat();
+		
+		cout << "\n\n\nNacisnij dowolny przycisk aby kontynuowaæ lub '"<< KLAWISZ_ZAPISZ <<"' zeby zapisac\n";
 		znak = _getch();
 		if ((char)znak == KLAWISZ_ZAPISZ){
 			zapiszSwiat();
@@ -82,11 +84,12 @@ void Swiat::symuluj(int liczbaRund) {
 		}
 		if (znak == SYMBOL_STRZALKOWY)
 			_getch();			
+		
 		system("cls");
-		rysujSwiat();
 		cout << "\tTura " << i << endl;
 		wykonajTure();
 		rysujSwiat();
+		
 		
 	}
 	cout << endl;

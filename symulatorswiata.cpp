@@ -94,7 +94,7 @@ Swiat* wczytaj(){
 		}
 		else if (sprawdzNapis(komenda, "[org]")) {
 			do {
-				cin >> komenda>>y>>x>>wiek;				
+				cin >> komenda;
 				if (sprawdzNapis(komenda, "W")) {
 					//wilk
 					cin >> y >> x >> wiek;
