@@ -13,12 +13,12 @@ Zwierze::Zwierze(int s, int i){
 void Zwierze::akcja() {
 	nowaPozycja();
 	Organizm* kolizyjny = swiat->pobierzWspolrzedne(nextY, nextX);
-	wykonunajRuchNa(kolizyjny);
+	wykonajRuchNa(kolizyjny);
 	x = nextX;
 	y = nextY;
 }
 
-void Zwierze::wykonunajRuchNa(Organizm* kolizyjny) {
+void Zwierze::wykonajRuchNa(Organizm* kolizyjny) {
 	if (kolizyjny != NULL && kolizyjny != this) {
 		if (porownajGatunek(kolizyjny)) {
 			rozmnazanie(kolizyjny);

@@ -14,14 +14,14 @@ char Lis::rysowanie() const {
 	return SYMBOL_LIS;
 }
 
-void Lis::wykonunajRuchNa(Organizm* kolizyjny) {
+void Lis::wykonajRuchNa(Organizm* kolizyjny) {
 	if (kolizyjny != NULL && kolizyjny != this && kolizyjny->GetSila() > sila) {
-		//cout << "Lis nie wykonuje ruchu na " << kolizyjny->rysowanie() << endl;
+		cout << "Lis nie wykonuje ruchu na " << kolizyjny->rysowanie() << endl;
 		nextX = x;
 		nextY = y;
 	}
 	else
-		Zwierze::wykonunajRuchNa(kolizyjny);
+		Zwierze::wykonajRuchNa(kolizyjny);
 }
 bool Lis::porownajGatunek(Organizm* drugi) const {
 	if (dynamic_cast<Lis*>(drugi))

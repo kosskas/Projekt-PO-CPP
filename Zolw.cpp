@@ -25,7 +25,6 @@ void Zolw::nowaPozycja() {
 void Zolw::kolizja(Organizm* atakujacy) {
 	if (atakujacy->GetSila() < PANCERZ_ZOLW) {
 		dynamic_cast<Zwierze*>(atakujacy)->wycofajSie();
-		cout << this->rysowanie() << " ODBIL ATAK";
 		cout << "\n\t\tZwierze " << atakujacy->rysowanie() << " wycofuje sie\n";
 	}
 	else {

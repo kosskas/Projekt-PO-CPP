@@ -6,8 +6,8 @@ protected:
 	int szansaSiewu;
 public:
 	Roslina(int s);
-	virtual void akcja();
-	virtual bool porownajGatunek(Organizm* drugi) const;
+	virtual void akcja() override;
+	virtual bool porownajGatunek(Organizm* drugi) const override;
 	virtual ~Roslina();
 };
 #endif // !_ROSLINA_

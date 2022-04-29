@@ -9,11 +9,11 @@ protected:
 	int prevY;
 public:
 	Zwierze(int s, int i);
-	void akcja();
+	void akcja() override;
 	virtual void nowaPozycja();
 	void wycofajSie();
-	virtual bool porownajGatunek(Organizm* drugi) const;
-	virtual void wykonunajRuchNa(Organizm* kolizyjny);
+	virtual bool porownajGatunek(Organizm* drugi) const override;
+	virtual void wykonajRuchNa(Organizm* kolizyjny);
 	virtual ~Zwierze();
 };
 #endif // !_ZWIERZE_

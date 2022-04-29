@@ -10,14 +10,12 @@ void Roslina::akcja(){
 		rozmnazanie(this);
 	}
 }
-
 bool Roslina::porownajGatunek(Organizm* drugi) const {
 	if (dynamic_cast<Roslina*>(drugi))
 		return true;
 	else
 		return false;
 }
-
 Roslina::~Roslina(){
 	swiat = NULL;
 }

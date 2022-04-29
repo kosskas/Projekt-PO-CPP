@@ -72,8 +72,7 @@ void Swiat::rysujMape() {
 void Swiat::symuluj(int liczbaRund) {
 	int znak;
 	for (int i = tura; i < liczbaRund && gra; i++) {	
-		//rysujSwiat();
-		
+		rysujSwiat();
 		cout << "\n\n\nNacisnij dowolny przycisk aby kontynuowaæ lub '"<< KLAWISZ_ZAPISZ <<"' zeby zapisac\n";
 		znak = _getch();
 		if ((char)znak == KLAWISZ_ZAPISZ){
@@ -83,13 +82,13 @@ void Swiat::symuluj(int liczbaRund) {
 			break;
 		}
 		if (znak == SYMBOL_STRZALKOWY)
-			_getch();			
-		
+			_getch();				
 		system("cls");
 		cout << "\tTura " << i << endl;
 		wykonajTure();
-		rysujSwiat();
 		
+		//system("cls");
+		rysujSwiat();
 		
 	}
 	cout << endl;

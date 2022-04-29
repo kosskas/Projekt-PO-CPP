@@ -20,7 +20,7 @@ void BarszczSosnowskiego::akcja() {
 			sasiad[i]->smierc();
 		}
 	}
-	if(wiek > WIEK_ROZMNAZANIA)
+	if (wiek > WIEK_ROZMNAZANIA)
 		Roslina::akcja();
 }
 void BarszczSosnowskiego::kolizja(Organizm* atakujacy) {

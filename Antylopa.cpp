@@ -27,13 +27,14 @@ void Antylopa::nowaPozycja() {
 }
 void Antylopa::kolizja(Organizm* atakujacy) {
 	if (obliczSzanse(SZANSZA_ANTYLOPY_NA_UCIECZKE)) {
-		Zwierze::nowaPozycja();
+		nowaPozycja();
 		Organizm* kolizyjny = swiat->pobierzWspolrzedne(nextY, nextX);
 		if (kolizyjny != NULL && kolizyjny != this)
 			Zwierze::kolizja(atakujacy);
 		else {
 			x = nextX;
 			y = nextY;
+			cout << "Antylopa wykonuje ucieczke\n";
 		}
 	}
 	else {
